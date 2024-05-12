@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'cadastro.dart';
+import 'package:meuevento/cadastro.dart';
+import 'home_screen.dart'; // Importe a tela inicial da sua aplicação
 import 'admin_login.dart';
 
 class LoginPage extends StatelessWidget {
@@ -16,8 +17,7 @@ class LoginPage extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              height:
-                  200, // Reduzindo o espaçamento entre a barra de título e o primeiro campo
+              height: 200,
             ),
             TextField(
               decoration: InputDecoration(
@@ -25,8 +25,7 @@ class LoginPage extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(
-                height: 50), // Reduzindo o espaçamento entre os campos de texto
+            SizedBox(height: 50),
             TextField(
               obscureText: true,
               decoration: InputDecoration(
@@ -34,22 +33,22 @@ class LoginPage extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(
-                height:
-                    220), // Reduzindo o espaçamento entre os campos e os botões
+            SizedBox(height: 220),
             ElevatedButton(
               onPressed: () {
                 // Lógica para validar o login
+                // Se o login for válido, redirecione para a tela inicial
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 12), // Reduzindo o espaçamento vertical
+                padding: const EdgeInsets.symmetric(vertical: 12),
                 child: Text('Entrar'),
               ),
             ),
-            SizedBox(
-                height:
-                    30), // Reduzindo o espaçamento entre o botão de login e o próximo
+            SizedBox(height: 30),
             TextButton(
               onPressed: () {
                 Navigator.push(
@@ -59,9 +58,7 @@ class LoginPage extends StatelessWidget {
               },
               child: Text('Clique aqui e cadastre-se agora'),
             ),
-            SizedBox(
-                height:
-                    190), // Espaçamento maior entre os botões e a parte inferior da tela
+            SizedBox(height: 190),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
@@ -70,8 +67,7 @@ class LoginPage extends StatelessWidget {
                 );
               },
               child: Padding(
-                padding: const EdgeInsets.symmetric(
-                    vertical: 1), // Reduzindo o espaçamento vertical
+                padding: const EdgeInsets.symmetric(vertical: 1),
                 child: Text('Acessar como administrador'),
               ),
             ),
