@@ -33,9 +33,8 @@ Descoberta Local: Os usuários podem explorar eventos locais em sua área, desco
 Acesso Exclusivo: Por meio de parcerias com organizadores de eventos, nosso aplicativo pode oferecer acesso a eventos exclusivos e experiências únicas.
 
 Comunidade Engajada: Ao participar de eventos listados no meuEvento, os usuários podem se conectar com outras pessoas com interesses semelhantes, formando uma comunidade engajada e vibrante.
-Interface do Usuário Intuitiva:
 
-Projetamos uma interface limpa e intuitiva, com navegação simplificada e design atraente, garantindo uma experiência de usuário agradável e sem complicações.
+Interface do Usuário Intuitiva:Projetamos uma interface limpa e intuitiva, com navegação simplificada e design atraente, garantindo uma experiência de usuário agradável e sem complicações.
 
 Segurança e Privacidade:
 
