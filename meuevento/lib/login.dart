@@ -33,7 +33,7 @@ class LoginPage extends StatelessWidget {
                 border: OutlineInputBorder(),
               ),
             ),
-            SizedBox(height: 220),
+            SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 // Lógica para validar o login
@@ -58,7 +58,7 @@ class LoginPage extends StatelessWidget {
               },
               child: Text('Clique aqui e cadastre-se agora'),
             ),
-            SizedBox(height: 190),
+            SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
