@@ -4,7 +4,6 @@ import 'admin_page.dart';
 class AdminLoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    // Controladores para os campos de texto
     TextEditingController usernameController = TextEditingController();
     TextEditingController passwordController = TextEditingController();
 
@@ -20,7 +19,6 @@ class AdminLoginPage extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            // Campo de texto para o nome de usuário
             TextField(
               controller: usernameController,
               decoration: InputDecoration(
@@ -29,7 +27,6 @@ class AdminLoginPage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 20),
-            // Campo de texto para a senha
             TextField(
               controller: passwordController,
               obscureText: true,
@@ -41,8 +38,6 @@ class AdminLoginPage extends StatelessWidget {
             SizedBox(height: 20),
             ElevatedButton(
               onPressed: () {
-                // Aqui você pode adicionar a lógica para validar o login do administrador
-                // Por enquanto, apenas redirecione para a página de administração
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => AdminPage()),

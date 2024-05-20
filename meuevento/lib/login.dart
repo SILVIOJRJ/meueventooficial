@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:meuevento/cadastro.dart';
-import 'home_screen.dart'; // Importe a tela inicial da sua aplicação
+import 'home_screen.dart'; 
 import 'admin_login.dart';
 
 class LoginPage extends StatelessWidget {
@@ -36,8 +36,6 @@ class LoginPage extends StatelessWidget {
             SizedBox(height: 40),
             ElevatedButton(
               onPressed: () {
-                // Lógica para validar o login
-                // Se o login for válido, redirecione para a tela inicial
                 Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(builder: (context) => HomeScreen()),

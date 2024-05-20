@@ -64,25 +64,21 @@ class HomeScreen extends StatelessWidget {
             IconButton(
               icon: Icon(Icons.home),
               onPressed: () {
-                // Navegar para a tela inicial
               },
             ),
             IconButton(
               icon: Icon(Icons.search),
               onPressed: () {
-                // Navegar para a tela de busca
               },
             ),
             IconButton(
               icon: Icon(Icons.list),
               onPressed: () {
-                // Navegar para a tela de eventos
               },
             ),
             IconButton(
               icon: Icon(Icons.person),
               onPressed: () {
-                // Navegar para a tela de perfil
               },
             ),
           ],
@@ -94,7 +90,6 @@ class HomeScreen extends StatelessWidget {
   Widget _buildCategoryButton(BuildContext context, String title) {
     return ElevatedButton(
       onPressed: () {
-        // Adicione a lógica para lidar com a categoria selecionada
       },
       child: Text(title),
     );

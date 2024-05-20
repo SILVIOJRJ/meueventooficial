@@ -11,7 +11,6 @@ class _AdminPageState extends State<AdminPage> {
   @override
   void initState() {
     super.initState();
-    // Não há mais contato com o banco de dados
   }
 
   @override
@@ -30,7 +29,6 @@ class _AdminPageState extends State<AdminPage> {
               style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 10),
-            // Não há mais contato com o banco de dados
           ],
         ),
       ),
