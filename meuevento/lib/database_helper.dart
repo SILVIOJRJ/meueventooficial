@@ -37,10 +37,40 @@ class DatabaseHelper {
         senha TEXT
       )
       ''');
+
+    await db.execute('''
+      CREATE TABLE eventos(
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        titulo TEXT,
+        descricao TEXT,
+        data TEXT,
+        local TEXT
+      )
+      ''');
   }
 
   Future<int> insertUser(Map<String, dynamic> user) async {
     Database db = await database;
     return await db.insert('users', user);
+  }
+
+  Future<int> insertEvento(Map<String, dynamic> evento) async {
+    Database db = await database;
+    return await db.insert('eventos', evento);
+  }
+
+  Future<List<Map<String, dynamic>>> getAllClientes() async {
+    Database db = await database;
+    return await db.query('users');
+  }
+
+  Future<List<Map<String, dynamic>>> getAllEventos() async {
+    Database db = await database;
+    return await db.query('eventos');
+  }
+
+  Future<List<Map<String, dynamic>>> getClientByEmail(String email) async {
+    Database db = await database;
+    return await db.query('users', where: 'email = ?', whereArgs: [email]);
   }
 }

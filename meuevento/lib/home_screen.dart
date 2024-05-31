@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:meuevento/login.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -6,6 +7,18 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: Text('meuEvento'),
+        actions: [
+          IconButton(
+            icon: Icon(Icons.logout),
+            onPressed: () {
+              Navigator.pushAndRemoveUntil(
+                context,
+                MaterialPageRoute(builder: (context) => LoginPage()),
+                (route) => false,
+              );
+            },
+          ),
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),

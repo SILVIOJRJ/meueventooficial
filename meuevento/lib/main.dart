@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'cadastro.dart';
+import 'gestao_clientes.dart'; // Importe o arquivo gestao_clientes.dart
+import 'gestao_eventos.dart'; // Importe o arquivo gestao_eventos.dart
 import 'package:sqflite_common_ffi/sqflite_ffi.dart';
 
 void main() async {
@@ -19,8 +21,9 @@ class MyApp extends StatelessWidget {
       ),
       home: LoginPage(), 
       routes: {
-        '/cadastro': (context) =>
-            CadastroPage(), 
+        '/cadastro': (context) => CadastroPage(),
+        '/gestao_clientes': (context) => GestaoClientesPage(), // Adicione a rota para GestaoClientesPage
+        '/gestao_eventos': (context) => GestaoEventosPage(), // Adicione a rota para GestaoEventosPage
       },
     );
   }
