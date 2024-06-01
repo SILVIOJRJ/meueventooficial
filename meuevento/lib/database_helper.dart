@@ -1,5 +1,7 @@
+import 'package:meuevento/editar_cliente.dart';
 import 'package:path/path.dart';
 import 'package:sqflite/sqflite.dart';
+
 
 class DatabaseHelper {
   static final DatabaseHelper _instance = DatabaseHelper._internal();
@@ -73,4 +75,32 @@ class DatabaseHelper {
     Database db = await database;
     return await db.query('users', where: 'email = ?', whereArgs: [email]);
   }
+  Future<int> updateCliente(Map<String, dynamic> cliente) async {
+  Database db = await database;
+  return await db.update(
+    'users',
+    cliente,
+    where: 'id = ?',
+    whereArgs: [cliente['id']],
+  );
+}
+
+Future<int> deleteCliente(int id) async {
+  Database db = await database;
+  return await db.delete(
+    'users',
+    where: 'id = ?',
+    whereArgs: [id],
+  );
+}
+
+Future<int> editarCliente(Map<String, dynamic> cliente) async {
+  Database db = await database;
+  return await db.update(
+    'users',
+    cliente,
+    where: "id = ?",
+    whereArgs: [cliente['id']],
+  );
+}
 }

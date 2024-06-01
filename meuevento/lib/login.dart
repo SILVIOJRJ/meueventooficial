@@ -3,6 +3,7 @@ import 'cadastro.dart';
 import 'home_screen.dart';
 import 'admin_page.dart';
 import 'database_helper.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class LoginPage extends StatelessWidget {
   final TextEditingController _usernameController = TextEditingController();
@@ -127,7 +128,19 @@ class LoginPage extends StatelessWidget {
               },
               child: Text('Clique aqui e cadastre-se agora'),
             ),
-            SizedBox(height: 40),
+            SizedBox(height: 10),
+            TextButton(
+              onPressed: () async {
+                const url = 'https://wa.me/5543984011157?text=Ol%C3%A1!%20Gostaria%20de%20ajuda%20com%20o%20aplicativo%20meuEvento.%20Esqueci%20minha%20senha.';
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  throw 'Não foi possível abrir o link $url';
+                }
+              },
+              child: Text('Esqueci minha senha'),
+            ),
+            SizedBox(height: 10),
           ],
         ),
       ),
